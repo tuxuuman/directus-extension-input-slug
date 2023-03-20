@@ -12,6 +12,11 @@ jobs:
       - uses: actions/setup-node@v2
       - run: npm ci
       - run: npm run build
+      - name: Upload Artifact
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   publish-npm:
