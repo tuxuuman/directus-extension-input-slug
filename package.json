@@ -7,6 +7,10 @@
 		"email": "tuxuuman@gmail.com",
 		"name": "tuxuuman"
 	},
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/tuxuuman/directus-extension-input-slug.git"
+	},
 	"files": [
 		"dist"
 	],
