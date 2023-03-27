@@ -17,7 +17,9 @@
 	"keywords": [
 		"directus",
 		"directus-extension",
-		"directus-custom-interface"
+		"directus-custom-interface",
+		"slug",
+		"slugify"
 	],
 	"directus:extension": {
 		"type": "interface",
