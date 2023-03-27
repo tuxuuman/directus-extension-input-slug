@@ -1,5 +1,5 @@
 <template>
-	<v-input icon="link" :model-value="value" @update:model-value="onInputChange">
+	<v-input icon="link" :model-value="value" @update:model-value="onInputChange" :type="type" :width="width">
 		<template #prepend>
 			<v-icon name="link" />
 		</template>
@@ -25,7 +25,19 @@ const props = defineProps({
 		default: {},
 	},
 	collection: {
-		type: String,
+		type: String
+	},
+	width: {
+		type: String
+	},
+	type: {
+		type: String
+	},
+	field: {
+		type: String
+	},
+	primaryKey: {
+		type: String
 	},
 });
 
@@ -58,7 +70,7 @@ const generateNewSlugIfExist = debounce(async (slug: string) => {
 		return;
 	}
 
-	const response = await api.get(`/items/${props.collection}?filter[slug]=${slug}&fields=slug`);
+	const response = await api.get(`/items/${props.collection}?filter[${props.field}]=${slug}&fields=${props.field}`);
 
 	if (response.data.data?.length) {
 		// generate random prefix for slug
