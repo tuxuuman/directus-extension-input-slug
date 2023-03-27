@@ -3,6 +3,13 @@
 	"description": "Input with auto generate slug for model properties",
 	"icon": "extension",
 	"version": "1.0.1",
+	"author": {
+		"email": "tuxuuman@gmail.com",
+		"name": "tuxuuman"
+	},
+	"files": [
+		"dist"
+	],
 	"keywords": [
 		"directus",
 		"directus-extension",
